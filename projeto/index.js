@@ -36,5 +36,9 @@ function selectCategory(data){
             selectBooks = data.filter(({categoria})=>categoria.toLowerCase() === 'literatura' ); 
             console.table(selectBooks.sort((a,b)=>a.pages - b.pages));
             break;
+        default:
+            console.log('Categoria nao disponivel!!!');
+            selectCategory(data);
+            break;
     }
 }
